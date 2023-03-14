@@ -1,0 +1,27 @@
+{
+  "bindings": [
+    {
+      "name": "req",
+      "authLevel": "function",
+      "methods": [
+        "get",
+        "put"
+      ],
+      "direction": "in",
+      "type": "httpTrigger"
+    },
+    {
+      "type": "http",
+      "direction": "out",
+      "name": "$return"
+    },
+    {
+      "name": "items",
+      "direction": "in",
+      "type": "cosmosDB",
+      "connectionStringSetting": "testcalldbstring",
+      "databaseName": "test_call",
+      "collectionName": "phone_number"
+    }
+  ]
+}
